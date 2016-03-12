@@ -16,15 +16,15 @@ Hemos hecho los siguientes pasos:
 
  4. Programar sincronizacion
 
-       * scrontab /etc/crontab ***** root update.sh
+      * scrontab /etc/crontab ***** root update.sh
 
  5. Configurar red interna en Virtualbox
 
 ![Máquina 1](swap.png "Máquina 1")
 
-![Máquina 2](swap2.png "Máquina 2")
+![Máquina 2](swap1.png "Máquina 2")
 
-![Máquina 3](swap3.png "Máquina 3")
+![Máquina 3](swap2.png "Máquina 3")
 
  6. Probamos la conexión
 
