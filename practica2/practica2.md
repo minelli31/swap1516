@@ -15,3 +15,8 @@ Hemos hecho los siguientes pasos:
       * rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l swap" swap@192.168.1.101:/var/www/ /var/www/
 
       ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
+
+ 3. Acceso sin contraseña para ssh
+
+      * ssh-keygen -t dsa
+      ![ssh-keygen](ssh-keygen.png "ssh-keygen")
