@@ -38,4 +38,4 @@ Hemos hecho los siguientes pasos:
  5. Programar tareas con crontab
 
       * /etc/contrab
-      ![contrab](contrab.png "contrab")
+      ![crontab](crontab.png "crontab")
