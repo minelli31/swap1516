@@ -20,3 +20,22 @@ Hemos hecho los siguientes pasos:
 
       * ssh-keygen -t dsa
       ![ssh-keygen](ssh-keygen.png "ssh-keygen")
+
+4. Usamos  el comando "ssh-copy-id" para hacer una copia de la clave a la máquina principal (a la que querremos acceder luego desde la secundaria):
+
+     * ssh-copy-id -i .ssh/id_dsa.pub  swap@192.168.1.101
+     ![ssh-copy-id](ssh-copy-id.png "ssh-copy-id")
+
+     Conectarnos a dicho equipo sin contraseña:
+     * ssh 192.168.1.101 -l swap
+     ![SSH Máquina 1](ssh-maquina_1.png "SSH Máquina 1")
+
+     Para ejecutar comandos añadimos al final del comando ssh para conectarnos:
+     * ssh 192.168.1.101 -l swap uname -a
+     ![SSH Máquina Uname 1](ssh-maquina_uname.png "SSH Máquina Uname 1")
+
+
+ 5. Programar tareas con crontab
+
+      * /etc/contrab
+      ![contrab](contrab.png "contrab")
