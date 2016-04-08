@@ -10,14 +10,14 @@ Hemos hecho los siguientes pasos:
 
       ![Máquina 2](var_maq_2.png "Máquina 2")
 
-******************************************************************************************************************************************************
+
  2. Hacemos la copia completa del directorio /var/www pero excluyendo /var/www/error , /var/www/stats y /var/www/files/pictures
 
       * rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l swap" swap@192.168.1.101:/var/www/ /var/www/
 
       ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
 
-******************************************************************************************************************************************************
+
 
  3. Acceso sin contraseña para ssh
 
@@ -25,7 +25,7 @@ Hemos hecho los siguientes pasos:
       ![ssh-keygen](ssh-keygen.png "ssh-keygen")
 
 
-******************************************************************************************************************************************************
+
 
 4. Usamos  el comando "ssh-copy-id" para hacer una copia de la clave a la máquina principal (a la que querremos acceder luego desde la secundaria):
 
@@ -43,7 +43,7 @@ Hemos hecho los siguientes pasos:
      ![SSH Máquina Uname 1](ssh-maquina_uname.png "SSH Máquina Uname 1")
 
 
-******************************************************************************************************************************************************
+
  5. Programar tareas con crontab
 
       * /etc/contrab
