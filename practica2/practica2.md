@@ -18,13 +18,11 @@ Hemos hecho los siguientes pasos:
       ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
 
 
-***
  3. Acceso sin contraseña para ssh
 
       * ssh-keygen -t dsa
+
       ![ssh-keygen](ssh-keygen.png "ssh-keygen")
-
-
 
 
 4. Usamos  el comando "ssh-copy-id" para hacer una copia de la clave a la máquina principal (a la que querremos acceder luego desde la secundaria):
@@ -48,3 +46,5 @@ Hemos hecho los siguientes pasos:
 
       * /etc/contrab
       ![crontab](crontab.png "crontab")
+
+***
