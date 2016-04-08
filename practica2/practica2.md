@@ -18,7 +18,7 @@ Hemos hecho los siguientes pasos:
       ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
 
 
-
+***
  3. Acceso sin contraseña para ssh
 
       * ssh-keygen -t dsa
