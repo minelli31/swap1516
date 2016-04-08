@@ -10,6 +10,8 @@ Hemos hecho los siguientes pasos:
 
       ![Máquina 2](var_maq_2.png "Máquina 2")
 
- 2.
+ 2. Hacemos la copia completa del directorio /var/www pero excluyendo /var/www/error , /var/www/stats y /var/www/files/pictures
 
-      *
+      * rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l swap" swap@192.168.1.101:/var/www/ /var/www/
+
+      ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
