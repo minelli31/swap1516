@@ -1,0 +1,26 @@
+<pregunta>
+  <enunciado>Son características de una clúster web, excepto:</enunciado>
+  <opcionA>Alto rendimiento</opcionA>
+  <opcionB>Alta disponibilidad</opcionB>
+  <opcionC>Segmentación</opcionC>
+  <opcionD>Escalabilidad</opcionD>
+  <solucion>C</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>Por lo general, los datos se replican entre servidores para proporcionar compatibilidad con las siguientes aplicaciones y requisitos, excepto:</enunciado>
+  <opcionA>Integrar datos heterogéneos</opcionA>
+  <opcionB>Ahorrar costes</opcionB>
+  <opcionC>Integrar datos de varios sitios</opcionC>
+  <opcionD>Descargar procesos por lotes</opcionD>
+  <solucion>B</solucion>
+</pregunta>
+
+<pregunta>
+  <enunciado>Uno de los principales problemas de los mayores sitios web en Internet es cómo gestionar las solicitudes de un gran número de usuarios. Se trata de un problema de?</enunciado>
+  <opcionA>Escalabilidad</opcionA>
+  <opcionB>Almacenamiento</opcionB>
+  <opcionC>Consumo de energía</opcionC>
+  <opcionD>Protocolos de comunicación y servicios</opcionD>
+  <solucion>A</solucion>
+</pregunta>
