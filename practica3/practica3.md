@@ -66,10 +66,22 @@ Hemos hecho los siguientes pasos:
       ![NGINX START](nginx_start.png "nginx start")
 
 
- 2. Hacemos la copia completa del directorio /var/www pero excluyendo /var/www/error, /var/www/stats y /var/www/files/pictures
+ 2. Instalación del haproxy
       ~~~
-      rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e "ssh -l swap" swap@192.168.1.101:/var/www/ /var/www/
+      apt-get install haproxy      
       ~~~
-      ![Máquina 2 Exclude](exclude_err_pic.png "Máquina 2 Exclude")
+
+      Para configurar el haproxy editamso el fichero /etc/haproxy/haproxy.cfg
+
+      Configuramos para que pueda escuchar el trafico en el puerto 80 y redirigirlo a alguna de las maquinas servidoras finales (debe conocer sus IP). Por lo que usaremos como configuracion inicial la siguiente:
+
+
+      ![HAPROXY CONFIG](haproxy_cfg.png "haproxy config")
+
+      Lanzamos el sercicio:
+
+      ~~~
+      /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+      ~~~
 
 ***
