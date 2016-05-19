@@ -7,7 +7,7 @@
 
       Hemos ejecutado un script para la serie de pruebas con la sieguiente instrucción:
 
-      ~~~bash
+      ~~~python
         ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
       ~~~
 
