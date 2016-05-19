@@ -44,9 +44,11 @@
       ~~~
 
     Las opciones de ejecucion que utilizaremos seran -b -t60S -v
+
       * b ejecutaremos los tests sin pausas con lo que comprobaremos el rendimiento general
       * t60s ejecutaremos siege durante 60 segundos
       * v le indicamos que nos muestre mas informacion
+
     Direccion o identificador del servidor al que enviaremos las peticiones
 
     ![SIEGE HAPROX](prueba1_siege_haprox.png "siege_haprox")
@@ -59,7 +61,7 @@
     ![Result SIEGE NGINX](siege_nginx.png "result_siege_nginx")
     ![Result SIEGE M1](siege_m1.png "result_siege_m1")
 
-    La comparativa final de la prueba en ApacheBench:
+    La comparativa final de la prueba en Siege:
 
     ![Result SIEGE Comparativa](siege_comparativa.png "result_comp_siege")
 ***
