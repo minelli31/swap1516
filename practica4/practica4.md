@@ -8,7 +8,7 @@
       Hemos ejecutado un script para la serie de pruebas con la sieguiente instrucción:
 
       ~~~
-        ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
+        > ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
       ~~~
 
 
