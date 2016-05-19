@@ -24,6 +24,9 @@
 
       ![Result Comparativa](ab_comparativa.png "result_comp")
 
+      Podemos ver en la comparativa final que tarda más el servidor que tiene el balanceador de carga, esto se debe, a que el "camino" se se recorre a traves del balanceador de carga es mas largo. Tambien podemos ver como nginx tarda menos que haproxy.
+
+      Además podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
 
  2. Siege
 
