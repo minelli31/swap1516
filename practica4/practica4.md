@@ -1,7 +1,7 @@
 ### Práctica 4 - Comprobar el rendimiento de servidores web ###
-========================================================================
- 1. ApacheBench
- ----------------
+
+# 1. ApacheBench
+
 
       ApacheBench (ab) es un programa de ordenador línea de comandos de un solo subproceso para medir el rendimiento de los servidores web HTTP. [1] Originalmente diseñado para probar el servidor HTTP Apache, que es lo suficientemente genérico como para probar cualquier servidor web.
 
@@ -36,8 +36,8 @@
 
       Además podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
 
- 2. Siege
-  -------
+# 2. Siege
+
       El Siege fue diseñado para permitir a los desarrolladores web mediren el rendimiento de su código bajo estrés, para ver cómo se comporta el código frente a la carga en Internet.
 
 ***
