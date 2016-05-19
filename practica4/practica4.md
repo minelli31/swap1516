@@ -14,6 +14,16 @@
       ![AB NGINX](prueba1_nginx.png "ab_nginx")
       ![AB M1](prueba1_m1.png "ab_m1")
 
+      Hemos obtenido los siguientes resultados:
+
+      ![Result HAPROX](prueba1_haprox.png "result_haprox")
+      ![Result NGINX](ab_nginx.png "result_nginx")
+      ![Result M1](ab_m1.png "result_m1")
+
+      La comparativa final de la prueba en ApacheBench:
+
+      ![Result Comparativa](ab_comparativa.png "result_comp") 
+
 
  2. Siege
 
