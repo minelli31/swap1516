@@ -1,6 +1,6 @@
 ### Práctica 4 - Comprobar el rendimiento de servidores web ###
 
- 1. ApacheBench
+ <h1>1. ApacheBench</h1>
 
       ApacheBench (ab) es un programa de ordenador línea de comandos de un solo subproceso para medir el rendimiento de los servidores web HTTP. [1] Originalmente diseñado para probar el servidor HTTP Apache, que es lo suficientemente genérico como para probar cualquier servidor web.
 
@@ -11,9 +11,11 @@
       ~~~
 
 
-     *nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario*
-     *nº de concurrencia: cantidad de peticiones que se enviaran al ervidor destinatario, en cada solicitud*
-     *direccion destinataria: direccion o identificador del servidor al que enviaremos las peticiones*
+     * nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario
+
+     * nº de concurrencia: cantidad de peticiones que se enviaran al ervidor destinatario, en cada solicitud
+     
+     * direccion destinataria: direccion o identificador del servidor al que enviaremos las peticiones
 
       ![AB HAPROX](prueba1_haprox.png "ab_haprox")
       ![AB NGINX](prueba1_nginx.png "ab_nginx")
