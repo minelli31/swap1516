@@ -7,9 +7,9 @@
 
       Hemos ejecutado un script para la serie de pruebas con la sieguiente instrucción:
 
-      ~~~
+
         > ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
-      ~~~
+  
 
 
      * nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario
