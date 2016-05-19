@@ -7,8 +7,9 @@
 
       Hemos ejecutado un script para la serie de pruebas con la sieguiente instrucción:
 
-
+      ~~~
         > ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
+      ~~~
 
      * nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario
 
@@ -38,8 +39,9 @@
 
       El Siege fue diseñado para permitir a los desarrolladores web mediren el rendimiento de su código bajo estrés, para ver cómo se comporta el código frente a la carga en Internet.
 
+      ~~~
       > siege <opciones de ejecucion> <direccion destinataria>
-
+      ~~~
 
     Las opciones de ejecucion que utilizaremos seran -b -t60S -v
       * b ejecutaremos los tests sin pausas con lo que comprobaremos el rendimiento general
