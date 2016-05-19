@@ -1,5 +1,5 @@
 ### Práctica 4 - Comprobar el rendimiento de servidores web ###
-
+========================================================================
  1. ApacheBench
  ----------------
 
@@ -7,7 +7,7 @@
 
       Hemos ejecutado un script para la serie de pruebas con la sieguiente instrucción:
 
-      ~~~python
+      ~~~
         ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
       ~~~
 
