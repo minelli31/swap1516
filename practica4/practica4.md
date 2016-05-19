@@ -10,8 +10,6 @@
 
         > ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
 
-
-
      * nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario
 
      * nº de concurrencia: cantidad de peticiones que se enviaran al ervidor destinatario, en cada solicitud
@@ -24,9 +22,9 @@
 
       Hemos obtenido los siguientes resultados:
 
-      ![Result HAPROX](ab_haprox.png "result_haprox")
-      ![Result NGINX](ab_nginx.png "result_nginx")
-      ![Result M1](ab_m1.png "result_m1")
+      ![Result AB HAPROX](ab_haprox.png "result_haprox_ab")
+      ![Result AB NGINX](ab_nginx.png "result_nginx_ab")
+      ![Result AB M1](ab_m1.png "result_m1_ab")
 
       La comparativa final de la prueba en ApacheBench:
 
@@ -40,4 +38,26 @@
 
       El Siege fue diseñado para permitir a los desarrolladores web mediren el rendimiento de su código bajo estrés, para ver cómo se comporta el código frente a la carga en Internet.
 
+      > siege <opciones de ejecucion> <direccion destinataria>
+
+
+    Las opciones de ejecucion que utilizaremos seran -b -t60S -v
+      * b ejecutaremos los tests sin pausas con lo que comprobaremos el rendimiento general
+      * t60s ejecutaremos siege durante 60 segundos
+      * v le indicamos que nos muestre mas informacion
+    Direccion o identificador del servidor al que enviaremos las peticiones
+
+    ![SIEGE HAPROX](prueba1_siege_haprox.png "siege_haprox")
+    ![SIEGE NGINX](prueba1_siege_nginx.png "siege_nginx")
+    ![SIEGE M1](prueba1_siege_m1.png "siege_m1")
+
+    Hemos obtenido los siguientes resultados:
+
+    ![Result SIEGE HAPROX](siege_haprox.png "result_siege_haprox")
+    ![Result SIEGE NGINX](siege_nginx.png "result_siege_nginx")
+    ![Result SIEGE M1](siege_m1.png "result_siege_m1")
+
+    La comparativa final de la prueba en ApacheBench:
+
+    ![Result SIEGE Comparativa](siege_comparativa.png "result_comp_siege")
 ***
