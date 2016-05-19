@@ -10,6 +10,11 @@
         ab -n <nº de peticiones> -c <nº concurrencia> <direccion destinataria>
       ~~~
 
+
+     *nº de peticiones: es el nº total de peticiones que se enviara al servicor destinatario*
+     *nº de concurrencia: cantidad de peticiones que se enviaran al ervidor destinatario, en cada solicitud*
+     *direccion destinataria: direccion o identificador del servidor al que enviaremos las peticiones*
+
       ![AB HAPROX](prueba1_haprox.png "ab_haprox")
       ![AB NGINX](prueba1_nginx.png "ab_nginx")
       ![AB M1](prueba1_m1.png "ab_m1")
@@ -29,5 +34,6 @@
       Además podemos ver como el servidor final responde mas peticiones por segundo que el balanceador de carga. Algo normal, debido a que este es mas rapido como hemos visto en la grafica anterior.
 
  2. Siege
+      El Siege fue diseñado para permitir a los desarrolladores web mediren el rendimiento de su código bajo estrés, para ver cómo se comporta el código frente a la carga en Internet.
 
 ***
