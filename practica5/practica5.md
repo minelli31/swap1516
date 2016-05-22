@@ -58,8 +58,17 @@
 
   La configuración es similar a la del maestro, con la diferencia del Paso 2 (server-id) que en este caso es 2.
 
-  En el maestro creamos un usuario y le damos permis de acceso a la replicación, con los siguientes comandos. 
+  En el maestro creamos un usuario y le damos permis de acceso a la replicación, con los siguientes comandos.
 
-  ![CREATE 2](create2.png "create_2")
+    ![CREATE 2](create2.png "create_2")
+    ![STATUS](sec_status.png "status")
+
+  En el esclavo introducimos el siguiente comando:
+
+  ~~~
+  mysql> CHANGE MASTER TO MASTER_HOST='192.168.31.200',
+  MASTER_USER='esclavo', MASTER_PASSWORD='esclavo',
+  MASTER_LOG_FILE='bin.000003', MASTER_LOG_POS=501,
+  MASTER_PORT=3306;
 4.
 ***
