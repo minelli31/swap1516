@@ -10,16 +10,23 @@
 
   Antes de hacer la copia de seguridad en el archivo .sql debemos evitar que se acceda a la BD para eso bloqueamos la BD.
   ~~~
-  > flush tables with read lock;
+  mysql> flush tables with read lock;
   ~~~
   ![BLOQUEO BD](block_act.png "bloqueo_bd")
 
   Creamos una copia local de nuestra base de datos, tenemos que acceder como root:
   ~~~
-  > mysqldump contactos -u root -p > /root/contactos.sql
+  #root> mysqldump contactos -u root -p > /root/contactos.sql
   ~~~
   Comprobamos com * ls -la /root/ * si se ha creado la copia.
+
   ![LS ROOT](_ls_root.png "ls_root")
+
+  Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
+  ~~~
+  mysql> unlock tables;
+  ~~~
+  ![UNLOCK](unlock.png "unlock")
 
 
 3. Replicación de BD mediante una configuración maestro-esclavo
