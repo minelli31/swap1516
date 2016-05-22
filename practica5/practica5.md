@@ -14,7 +14,7 @@
   ~~~
   > mysqldump contactos -u root -p > /root/contactos.sql
   ~~~
-  Comprobamos com ~~~ls -la /root/~~~ si se ha creado la copia.
+  Comprobamos com * ls -la /root/ * si se ha creado la copia.
   ![LS ROOT](_ls_root.png "ls_root")
 
 
