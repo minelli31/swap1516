@@ -8,6 +8,10 @@
 
 2. Replicar una BD MySQL con mysqldump
 
+  Antes de hacer la copia de seguridad en el archivo .sql debemos evitar que se acceda a la BD para eso bloqueamos la BD.
+  ~~~
+  > flush tables with read lock;
+  ~~~
   ![BLOQUEO BD](block_act.png "bloqueo_bd")
 
   Creamos una copia local de nuestra base de datos, tenemos que acceder como root:
