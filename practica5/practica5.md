@@ -28,6 +28,9 @@
   ~~~
   ![UNLOCK](unlock.png "unlock")
 
+  Enviamos la BD a la otra máquina y la ubicamos en /root/.
+
+  ![ENVIO BD](_envio_bd.png "evio_bd")
 
 3. Replicación de BD mediante una configuración maestro-esclavo
 
