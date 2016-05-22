@@ -63,12 +63,27 @@
     ![CREATE 2](create2.png "create_2")
     ![STATUS](sec_status.png "status")
 
-  En el esclavo introducimos el siguiente comando:
+  En el esclavo introducimos el siguiente comando: (Tenemos que parar el esclavo para la ejecución de la sentencia, luego volvemos a iniciarlo)
 
   ~~~
-  mysql> CHANGE MASTER TO MASTER_HOST='192.168.31.200',
+  mysql> CHANGE MASTER TO MASTER_HOST='192.168.1.100',
   MASTER_USER='esclavo', MASTER_PASSWORD='esclavo',
-  MASTER_LOG_FILE='bin.000003', MASTER_LOG_POS=501,
+  MASTER_LOG_FILE='mysql-bin.000017', MASTER_LOG_POS=841,
   MASTER_PORT=3306;
+  ~~~
+  ![CHANGE MASTER](sec_chg_master.png "change_master")
+
+En el equipo maestro activamos las tablas con:
+~~~
+mysql> mysql tables;
+~~~
+Ejecutamos el siguiente comando en el equipo esclavo para verificar si todo esta correcto:
+~~~
+mysql> SHOW SLAVE STATUS\G
+~~~
+Si el valor de Second_Behind_Master es distinto de null, todo estará correcto.
+
+  ![STATUS G](status_g.png "status_g")
+
 4.
 ***
