@@ -53,5 +53,13 @@
     ~~~
     ![MY CNF 1](_my_cnf_1.png "my_cnf_1")
     ![MY CNF 2](_my_cnf_2.png "my_cnf_2")
+
+  Si no nos ha dado ningún error la configuración del maestro, podemos pasar a hacer la configuración del mysql del esclavo. Para ello editaremos como root el fichero /etc/mysql/my.conf
+
+  La configuración es similar a la del maestro, con la diferencia del Paso 2 (server-id) que en este caso es 2.
+
+  En el maestro creamos un usuario y le damos permis de acceso a la replicación, con los siguientes comandos. 
+
+  ![CREATE 2](create2.png "create_2")
 4.
 ***
