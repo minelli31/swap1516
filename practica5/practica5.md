@@ -85,5 +85,13 @@ Si el valor de Second_Behind_Master es distinto de null, todo estará correcto.
 
   ![STATUS G](status_g.png "status_g")
 
-4.
+ Comprobamos que todo esta bien insertando en la base de datos del maestro un nuevo dato, si esta todo correcto este dato se insertará automáticamente en la base de datos del equipo esclavo.
+
+ ![PRUEBA MAESTRO](prueba_sw1.png "prueba maestro")
+ ![PRUEBA ESCLAVO](prueba_sw2.png "prueba esclavo")
+
+
+
+
+
 ***
