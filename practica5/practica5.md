@@ -36,9 +36,22 @@
 
   ![CREAR BD2](_db2_create.png "crear_bd2")
   ![MOSTRAR DBs 2](_show_db2.png "show_db2")
-  
+
 3. Replicación de BD mediante una configuración maestro-esclavo
 
+  Lo primero que haremos, sera configurar el MySQL del equipo maestro. Para ello editaremos como root el fichero /etc/mysql/my.cnf:
 
+    * Comentamos el parámetro bind-address. Este sirve para que escuche a un servidor.
+    * Le indicamos el archivo donde almacenar el log de errores. De esta forma, si por ejemplo al reiniciar el servicio cometemos algún error en el archivo de configuración, en el archivo de log nos mostrará con detalle lo sucedido.
+    * Establecemos el identificador del servidores.
+    * Le indicamos el archivo de registro binario. El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
+
+    Guardamos las configuraciones y reiniciamos el servicio, con unos de los comandos a seguir:
+    ~~~
+    sudo service mysql restart
+    /etc/init.d/mysql restart
+    ~~~
+    ![MY CNF 1](_my_cnf_1.png "my_cnf_1")
+    ![MY CNF 2](_my_cnf_2.png "my_cnf_2")
 4.
 ***
