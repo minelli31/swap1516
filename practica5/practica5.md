@@ -35,7 +35,8 @@
   Restauración, en equipo remoto, de la base de datos con la información del equipo maestro y comprobamos la base de datos y consultaremos su contenido, podemos ver que el proceso se ha realizado con éxito.
 
   ![CREAR BD2](_db2_create.png "crear_bd2")
-
+  ![MOSTRAR DBs 2](_show_db2.png "show_db2")
+  
 3. Replicación de BD mediante una configuración maestro-esclavo
 
 
