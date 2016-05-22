@@ -46,10 +46,10 @@
     * Establecemos el identificador del servidores.
     * Le indicamos el archivo de registro binario. El registro binario contiene toda la información que está disponible en el registro de actualizaciones, en un formato más eficiente y de una manera que es segura para las transacciones.
 
-    Guardamos las configuraciones y reiniciamos el servicio, con unos de los comandos a seguir:
+  Guardamos las configuraciones y reiniciamos el servicio, con unos de los comandos a seguir:
     ~~~
-    sudo service mysql restart
-    /etc/init.d/mysql restart
+    #root> service mysql restart
+    #root> /etc/init.d/mysql restart
     ~~~
     ![MY CNF 1](_my_cnf_1.png "my_cnf_1")
     ![MY CNF 2](_my_cnf_2.png "my_cnf_2")
