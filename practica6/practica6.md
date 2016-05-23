@@ -8,7 +8,7 @@
 
   Ahora arrancamos la maquina principal y instalamos el software necesario para configurar el RAID
 
-  *Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración*
+  **Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración**
 
   ![FDISK -L](fdisk.png "fdisk_l")
 
