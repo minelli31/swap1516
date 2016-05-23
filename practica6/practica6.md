@@ -8,9 +8,8 @@
 
   Ahora arrancamos la maquina principal y instalamos el software necesario para configurar el RAID
 
-  ~~~
-  Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración
-  ~~~
+  *Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración*
+
   ![FDISK -L](fdisk.png "fdisk_l")
 
   Ahora tenemos 3 discos, en los cuales el primero es en el que esta instalado el sistema, por eso nos muestra su tabla de particiones los otros 2 son los que hemos creado a través del controlador SCSI y no tienen tabla de particiones, todavia entán vacios.
