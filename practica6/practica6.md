@@ -27,7 +27,7 @@
     * Detección automática del número de núcleos del microprocesador a fin de aprovechar mejor los recursos del sistema.
 
     Después de instalar el MDADM ejecutamos *sudo fdisk -l*
-    
+
   **Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración**
 
   ![FDISK -L](fdisk.png "fdisk_l")
@@ -36,11 +36,25 @@
 
   Ahora ya podemos crear el RAID 1. Para ello "crearemos" un dispositivo nuevo, /dev/md0, que "contendra" los dos discos que hemos creado, /dev/sdb y /deb/sdc
 
-2. Replicar una BD MySQL con mysqldump
+  ![FDISK -L](raid_1.png "raid 1")
 
+  **El dispositivo se creó con el nombre /dev/md0**
 
+  Después de crear el dispositivo RAID inicializamos un dispositivo de almacenamiento con *mkfs* y creamos el directorio en el que se montará la unidad del RAID con *mkdir* y lo montamos con *mount*:
 
+  ~~~
+  #root> mkfs /dev/md0
+  #root> mkdir /dat
+  #root> mount /dev/md0 /dat
+  ~~~
 
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](raid_1.png "raid 1")
 
 
 
