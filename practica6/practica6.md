@@ -62,10 +62,79 @@
   ![FDISK -L](uuid.png "uuid")
   ![FDISK -L](fstab.png "fstab")
 
-  ![FDISK -L](raid_1.png "raid 1")
-  ![FDISK -L](raid_1.png "raid 1")
-  ![FDISK -L](raid_1.png "raid 1")
+2. Comprobación de los RAID
 
+  Ahora simularemos un fallo en uno de los discos y comprobaremos que el dispositivo RAID funciona correctamente:
 
+  ~~~
+  #root> mdadm --manage --set-faulty /dev/md0 /dev/sd
+  ~~~
+
+  ![FDISK -L](prueba_1.png "prueba 1")
+
+  Comprobamos el estado del RAID, observamos que la unidad /dev/sdb esta en estado de fallo.
+
+  Ahora procedemos a retirar *en caliente* el disco que está marcado como que ha fallado:
+
+  ~~~
+  #root> mdadm --manage --remove /dev/md0 /dev/sdb  
+  ~~~
+  Comprobamos el estado del RAID y podemos ver como la unidad /dev/sdb no aparece.
+
+  Añadimos de la misma manera *en caliente* un nuevo disco que reempazará al disco que hemos retirado:
+
+  ~~~
+  #root> mdadm --manage --add /dev/md0 /dev/sdb
+  ~~~
+
+  ![FDISK -L](hot_add.png "añadir disco en caliente")
+
+  Comprobamos que la unidad /dev/sdb está activa en nuestro sistema.
+
+3. Configuración del servidor NFS
+
+  Instalaremos e configuraremos el servidor NFS, para poder disfrutar del servicio de compartir carpetas en la red mediante NFS, en el PC servidor es necesario instalar el paquete del servidor NFS. Lo normal es que todos los PCs dispongan del paquetes servidor de NFS ya que en cualquier momento puede existir la necesidad de tener que compartir una carpeta desde cualquier PC, aunque lo habitual es que el único que comparta sea el servidor. Que un PC de un usuario tenga instalado el paquete del servidor NFS, no significa que automáticamente esté compartiendo su sistema de archivos en la red. Para ello es necesario configurar y arrancar el servicio.
+
+  ~~~
+  #root> apt-get install nfs-common nfs-kernel-server
+  ~~~
+
+  ![FDISK -L](install_nfs.png "install nfs")
+
+  Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo */etc/exports*
+
+  En cada línea del archivo de configuración del servidor NFS /etc/exports, se puede especificar:
+
+    * La carpeta que se quiere compartir
+    * El modo en que se comparte (solo lectura 'ro' o lectura y escritura 'rw' )
+    * Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)
+
+  ![FDISK -L](exports.png "exports")
+
+  Error al tratar de arrancar el servicio antes de configurarlo.
+
+  ![FDISK -L](error_start.png "error start")
+
+  Iniciamos el servicio
+
+  ~~~
+  #root> service nfs-kernel-server start
+  ~~~
+  ![FDISK -L](start_service.png "start service nfs")
+
+  Ahora configuraremos la máquina 2.
+
+  Necesitaremso montar el servicio en nustra máquina 2 para incorporar un espacio compartido *nfs*, para eso haremos uso de la orden *mount* y editaremos el fichero */etc/fstab*.
+
+  ~~~
+  #root> mount -t nfs -o rw,nosuid 192.168.1.100:/dat /home/swap2/test
+  ~~~
+
+  ![FDISK -L](mount_swap2.png "mount swap2")
+  ![FDISK -L](fstab_swap2.png "fstab swap2")
+
+  Comprobamos que todo funciona añadiendo y quitando ficheros en la máquina uno, todo el proceso se hace paralelamente en la máquina 2 como un "espejo" de la máquina 1.
+
+  ![FDISK -L](test_final.png "test final")
 
 ***
