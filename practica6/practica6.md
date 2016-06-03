@@ -101,6 +101,10 @@
 
   ![FDISK -L](install_nfs.png "install nfs")
 
+  Error al tratar de arrancar el servicio antes de configurarlo.
+
+  ![FDISK -L](error_start.png "error start")
+
   Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo */etc/exports*
 
   En cada línea del archivo de configuración del servidor NFS /etc/exports, se puede especificar:
@@ -110,10 +114,6 @@
     * Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)
 
   ![FDISK -L](exports.png "exports")
-
-  Error al tratar de arrancar el servicio antes de configurarlo.
-
-  ![FDISK -L](error_start.png "error start")
 
   Iniciamos el servicio
 
