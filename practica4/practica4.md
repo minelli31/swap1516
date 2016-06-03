@@ -17,19 +17,19 @@
 
      * direccion destinataria: direccion o identificador del servidor al que enviaremos las peticiones
 
-      ![AB HAPROX](prueba1_haprox.png "ab_haprox")
-      ![AB NGINX](prueba1_nginx.png "ab_nginx")
-      ![AB M1](prueba1_m1.png "ab_m1")
+      ![AB HAPROX](img/prueba1_haprox.png "ab_haprox")
+      ![AB NGINX](img/prueba1_nginx.png "ab_nginx")
+      ![AB M1](img/prueba1_m1.png "ab_m1")
 
       Hemos obtenido los siguientes resultados:
 
-      ![Result AB HAPROX](ab_haprox.png "result_haprox_ab")
-      ![Result AB NGINX](ab_nginx.png "result_nginx_ab")
-      ![Result AB M1](ab_m1.png "result_m1_ab")
+      ![Result AB HAPROX](img/ab_haprox.png "result_haprox_ab")
+      ![Result AB NGINX](img/ab_nginx.png "result_nginx_ab")
+      ![Result AB M1](img/ab_m1.png "result_m1_ab")
 
       La comparativa final de la prueba en ApacheBench:
 
-      ![Result Comparativa](ab_comparativa.png "result_comp")
+      ![Result Comparativa](img/ab_comparativa.png "result_comp")
 
       Podemos ver en la comparativa final que tarda más el servidor que tiene el balanceador de carga, esto se debe, a que el "camino" se se recorre a traves del balanceador de carga es mas largo. Tambien podemos ver como nginx tarda menos que haproxy.
 
@@ -51,17 +51,17 @@
 
     Direccion o identificador del servidor al que enviaremos las peticiones
 
-    ![SIEGE HAPROX](prueba1_siege_haprox.png "siege_haprox")
-    ![SIEGE NGINX](prueba1_siege_nginx.png "siege_nginx")
-    ![SIEGE M1](prueba1_siege_m1.png "siege_m1")
+    ![SIEGE HAPROX](img/prueba1_siege_haprox.png "siege_haprox")
+    ![SIEGE NGINX](img/prueba1_siege_nginx.png "siege_nginx")
+    ![SIEGE M1](img/prueba1_siege_m1.png "siege_m1")
 
     Hemos obtenido los siguientes resultados:
 
-    ![Result SIEGE HAPROX](siege_haprox.png "result_siege_haprox")
-    ![Result SIEGE NGINX](siege_nginx.png "result_siege_nginx")
-    ![Result SIEGE M1](siege_m1.png "result_siege_m1")
+    ![Result SIEGE HAPROX](img/siege_haprox.png "result_siege_haprox")
+    ![Result SIEGE NGINX](img/siege_nginx.png "result_siege_nginx")
+    ![Result SIEGE M1](img/siege_m1.png "result_siege_m1")
 
     La comparativa final de la prueba en Siege:
 
-    ![Result SIEGE Comparativa](siege_comparativa.png "result_comp_siege")
+    ![Result SIEGE Comparativa](img/siege_comparativa.png "result_comp_siege")
 ***

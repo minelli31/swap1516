@@ -20,14 +20,14 @@ Hemos hecho los siguientes pasos:
 
  5. Configurar red interna en Virtualbox
 
-![Máquina 1](swap.png "Máquina 1")
+![Máquina 1](img/swap.png "Máquina 1")
 
-![Máquina 2](swap1.png "Máquina 2")
+![Máquina 2](img/swap1.png "Máquina 2")
 
-![Máquina 3](swap2.png "Máquina 3")
+![Máquina 3](img/swap2.png "Máquina 3")
 
  6. Probamos la conexión
 
-![SSH 1](ssh1.png "Conexión 1")
+![SSH 1](img/ssh1.png "Conexión 1")
 
-![SSH 2](ssh2.png "Conexión 2")
+![SSH 2](img/ssh2.png "Conexión 2")

@@ -61,9 +61,9 @@ Hemos hecho los siguientes pasos:
     sudo service nginx restart
     ~~~
 
-      ![NGINX](nginx.png "nginx")
+      ![NGINX](img/nginx.png "nginx")
 
-      ![NGINX START](nginx_start.png "nginx start")
+      ![NGINX START](img/nginx_start.png "nginx start")
 
 
  2. Instalación del haproxy
@@ -76,7 +76,7 @@ Hemos hecho los siguientes pasos:
       Configuramos para que pueda escuchar el trafico en el puerto 80 y redirigirlo a alguna de las maquinas servidoras finales (debe conocer sus IP). Por lo que usaremos como configuracion inicial la siguiente:
 
 
-      ![HAPROXY CONFIG](haproxy_cfg.png "haproxy config")
+      ![HAPROXY CONFIG](img/haproxy_cfg.png "haproxy config")
 
       Lanzamos el sercicio:
 

@@ -4,7 +4,7 @@
 
   Hemos creado una base de datos en MySQL e insertaremos algunos datos.
 
-  ![Crear 1](tab1.png "crear_1")
+  ![Crear 1](img/tab1.png "crear_1")
 
 2. Replicar una BD MySQL con mysqldump
 
@@ -12,7 +12,7 @@
   ~~~
   mysql> flush tables with read lock;
   ~~~
-  ![BLOQUEO BD](block_act.png "bloqueo_bd")
+  ![BLOQUEO BD](img/block_act.png "bloqueo_bd")
 
   Creamos una copia local de nuestra base de datos, tenemos que acceder como root:
   ~~~
@@ -20,22 +20,22 @@
   ~~~
   Comprobamos com * ls -la /root/ * si se ha creado la copia.
 
-  ![LS ROOT](_ls_root.png "ls_root")
+  ![LS ROOT](img/_ls_root.png "ls_root")
 
   Una vez ya hemos creado nuestra copia, procedemos a desbloquear las tablas:
   ~~~
   mysql> unlock tables;
   ~~~
-  ![UNLOCK](unlock.png "unlock")
+  ![UNLOCK](img/unlock.png "unlock")
 
   Enviamos la BD a la otra máquina y la ubicamos en /root/.
 
-  ![ENVIO BD](_envio_bd.png "evio_bd")
+  ![ENVIO BD](img/_envio_bd.png "evio_bd")
 
   Restauración, en equipo remoto, de la base de datos con la información del equipo maestro y comprobamos la base de datos y consultaremos su contenido, podemos ver que el proceso se ha realizado con éxito.
 
-  ![CREAR BD2](_db2_create.png "crear_bd2")
-  ![MOSTRAR DBs 2](_show_db2.png "show_db2")
+  ![CREAR BD2](img/_db2_create.png "crear_bd2")
+  ![MOSTRAR DBs 2](img/_show_db2.png "show_db2")
 
 3. Replicación de BD mediante una configuración maestro-esclavo
 
@@ -51,8 +51,8 @@
     #root> service mysql restart
     #root> /etc/init.d/mysql restart
     ~~~
-    ![MY CNF 1](_my_cnf_1.png "my_cnf_1")
-    ![MY CNF 2](_my_cnf_2.png "my_cnf_2")
+    ![MY CNF 1](img/_my_cnf_1.png "my_cnf_1")
+    ![MY CNF 2](img/_my_cnf_2.png "my_cnf_2")
 
   Si no nos ha dado ningún error la configuración del maestro, podemos pasar a hacer la configuración del mysql del esclavo. Para ello editaremos como root el fichero /etc/mysql/my.conf
 
@@ -60,8 +60,8 @@
 
   En el maestro creamos un usuario y le damos permis de acceso a la replicación, con los siguientes comandos.
 
-    ![CREATE 2](create2.png "create_2")
-    ![STATUS](sec_status.png "status")
+    ![CREATE 2](img/create2.png "create_2")
+    ![STATUS](img/sec_status.png "status")
 
   En el esclavo introducimos el siguiente comando: (Tenemos que parar el esclavo para la ejecución de la sentencia, luego volvemos a iniciarlo)
 
@@ -71,7 +71,7 @@
   MASTER_LOG_FILE='mysql-bin.000017', MASTER_LOG_POS=841,
   MASTER_PORT=3306;
   ~~~
-  ![CHANGE MASTER](sec_chg_master.png "change_master")
+  ![CHANGE MASTER](img/sec_chg_master.png "change_master")
 
 En el equipo maestro activamos las tablas con:
 ~~~
@@ -83,12 +83,12 @@ mysql> SHOW SLAVE STATUS\G
 ~~~
 Si el valor de Second_Behind_Master es distinto de null, todo estará correcto.
 
-  ![STATUS G](status_g.png "status_g")
+  ![STATUS G](img/status_g.png "status_g")
 
  Comprobamos que todo esta bien insertando en la base de datos del maestro un nuevo dato, si esta todo correcto este dato se insertará automáticamente en la base de datos del equipo esclavo.
 
- ![PRUEBA MAESTRO](prueba_sw1.png "prueba maestro")
- ![PRUEBA ESCLAVO](prueba_sw2.png "prueba esclavo")
+ ![PRUEBA MAESTRO](img/prueba_sw1.png "prueba maestro")
+ ![PRUEBA ESCLAVO](img/prueba_sw2.png "prueba esclavo")
 
 
 

@@ -4,7 +4,7 @@
 
   Primeramente tenemos que configurar un controlador Small Computer System Interface, más conocida por el acrónimo inglés SCSI (interfaz de sistema para pequeñas computadoras), es una interfaz estándar para la transferencia de datos entre distintos dispositivos del bus de la computadora, a través de este controlador SCSI añadiremos 2 discos con la misma capacidad de nuestra máquina principal.
 
-    ![Crear Discos1](discos.png "crear_discos")
+    ![Crear Discos1](img/discos.png "crear_discos")
 
   Ahora arrancamos la maquina principal y instalamos el software necesario para configurar el RAID
 
@@ -30,13 +30,13 @@
 
   **Durante el proceso de insalacion nos preguntará si queremos intalar Postfix, elegimos la opcion Sin configuración**
 
-  ![FDISK -L](fdisk.png "fdisk_l")
+  ![FDISK -L](img/fdisk.png "fdisk_l")
 
   Ahora tenemos 3 discos, en los cuales el primero es en el que esta instalado el sistema, por eso nos muestra su tabla de particiones los otros 2 son los que hemos creado a través del controlador SCSI y no tienen tabla de particiones, todavia entán vacios.
 
   Ahora ya podemos crear el RAID 1. Para ello "crearemos" un dispositivo nuevo, /dev/md0, que "contendra" los dos discos que hemos creado, /dev/sdb y /deb/sdc
 
-  ![FDISK -L](raid_1.png "raid 1")
+  ![FDISK -L](img/raid_1.png "raid 1")
 
   **El dispositivo se creó con el nombre /dev/md0**
 
@@ -54,13 +54,13 @@
   #root> mount
   #root> mdadm --detail /dev/md0
   ~~~
-  ![FDISK -L](mount.png "mount")
-  ![FDISK -L](detail.png "detail")
+  ![FDISK -L](img/mount.png "mount")
+  ![FDISK -L](img/detail.png "detail")
 
   Procedemos a editar el fichero */etc/fstab* y agregar el montaje automático del dispositivo que hemos creado y para esto necesitamos su UUID, con el comando *ls -l /dev/disk/by-uuid/*
 
-  ![FDISK -L](uuid.png "uuid")
-  ![FDISK -L](fstab.png "fstab")
+  ![FDISK -L](img/uuid.png "uuid")
+  ![FDISK -L](img/fstab.png "fstab")
 
 2. Comprobación de los RAID
 
@@ -70,7 +70,7 @@
   #root> mdadm --manage --set-faulty /dev/md0 /dev/sd
   ~~~
 
-  ![FDISK -L](prueba_1.png "prueba 1")
+  ![FDISK -L](img/prueba_1.png "prueba 1")
 
   Comprobamos el estado del RAID, observamos que la unidad /dev/sdb esta en estado de fallo.
 
@@ -87,7 +87,7 @@
   #root> mdadm --manage --add /dev/md0 /dev/sdb
   ~~~
 
-  ![FDISK -L](hot_add.png "añadir disco en caliente")
+  ![FDISK -L](img/hot_add.png "añadir disco en caliente")
 
   Comprobamos que la unidad /dev/sdb está activa en nuestro sistema.
 
@@ -99,11 +99,11 @@
   #root> apt-get install nfs-common nfs-kernel-server
   ~~~
 
-  ![FDISK -L](install_nfs.png "install nfs")
+  ![FDISK -L](img/install_nfs.png "install nfs")
 
   Error al tratar de arrancar el servicio antes de configurarlo.
 
-  ![FDISK -L](error_start.png "error start")
+  ![FDISK -L](img/error_start.png "error start")
 
   Antes de arrancar el servicio NFS, es necesario indicar qué carpetas deseamos compartir y si queremos que los usuarios accedan con permisos de solo lectura o de lectura y escritura. También existe la posibilidad de establecer desde qué PCs es posible conectarse. Estas opciones se configuran en el archivo */etc/exports*
 
@@ -113,14 +113,14 @@
     * El modo en que se comparte (solo lectura 'ro' o lectura y escritura 'rw' )
     * Desde qué PC o PCs se permite el acceso (nombre o IP del PC o rango de IPs)
 
-  ![FDISK -L](exports.png "exports")
+  ![FDISK -L](img/exports.png "exports")
 
   Iniciamos el servicio
 
   ~~~
   #root> service nfs-kernel-server start
   ~~~
-  ![FDISK -L](start_service.png "start service nfs")
+  ![FDISK -L](img/start_service.png "start service nfs")
 
   Ahora configuraremos la máquina 2.
 
@@ -130,11 +130,11 @@
   #root> mount -t nfs -o rw,nosuid 192.168.1.100:/dat /home/swap2/test
   ~~~
 
-  ![FDISK -L](mount_swap2.png "mount swap2")
-  ![FDISK -L](fstab_swap2.png "fstab swap2")
+  ![FDISK -L](img/mount_swap2.png "mount swap2")
+  ![FDISK -L](img/fstab_swap2.png "fstab swap2")
 
   Comprobamos que todo funciona añadiendo y quitando ficheros en la máquina uno, todo el proceso se hace paralelamente en la máquina 2 como un "espejo" de la máquina 1.
 
-  ![FDISK -L](test_final.png "test final")
+  ![FDISK -L](img/test_final.png "test final")
 
 ***
