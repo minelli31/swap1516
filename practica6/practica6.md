@@ -48,10 +48,20 @@
   #root> mount /dev/md0 /dat
   ~~~
 
-  ![FDISK -L](raid_1.png "raid 1")
-  ![FDISK -L](raid_1.png "raid 1")
-  ![FDISK -L](raid_1.png "raid 1")
-  ![FDISK -L](raid_1.png "raid 1")
+  Comprobamos si se ha montado correctamente con *mount* y el estado del RAID con *mdadm --detail /dev/md0*:
+
+  ~~~
+  #root> mount
+  #root> mdadm --detail /dev/md0
+  ~~~
+  ![FDISK -L](mount.png "mount")
+  ![FDISK -L](detail.png "detail")
+
+  Procedemos a editar el fichero */etc/fstab* y agregar el montaje automático del dispositivo que hemos creado y para esto necesitamos su UUID, con el comando *ls -l /dev/disk/by-uuid/*
+
+  ![FDISK -L](uuid.png "uuid")
+  ![FDISK -L](fstab.png "fstab")
+
   ![FDISK -L](raid_1.png "raid 1")
   ![FDISK -L](raid_1.png "raid 1")
   ![FDISK -L](raid_1.png "raid 1")
