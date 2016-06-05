@@ -81,6 +81,8 @@
   ~~~
   Comprobamos el estado del RAID y podemos ver como la unidad /dev/sdb no aparece.
 
+  ![FDISK -L](img/hot_remove.png "remover disco en caliente")
+
   Añadimos de la misma manera *en caliente* un nuevo disco que reempazará al disco que hemos retirado:
 
   ~~~
